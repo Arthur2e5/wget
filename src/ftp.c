@@ -39,6 +39,9 @@ as that of the covered work.  */
 #include <assert.h>
 #include <errno.h>
 #include <time.h>
+#ifdef HAVE_LIBZ
+#include <zlib.h>
+#endif
 
 #include "utils.h"
 #include "url.h"
@@ -52,6 +55,7 @@ as that of the covered work.  */
 #include "recur.h"              /* for INFINITE_RECURSION */
 #include "warc.h"
 #include "c-strcase.h"
+
 
 #ifdef __VMS
 # include "vms.h"
